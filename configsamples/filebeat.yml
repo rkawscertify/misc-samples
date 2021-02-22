@@ -1,0 +1,8 @@
+#============================demo entry==========================================#
+filebeat.prospectors:
+- type: log
+  paths:
+    - /var/lib/docker/containers/*/*.log 
+output.logstash:
+  enabled: true
+  hosts: ["localhost:5044"]
